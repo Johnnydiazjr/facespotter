@@ -260,6 +260,167 @@ as well as a jsx file
 Copy and paste from another component to load the files
 Remove what we don't need or will use such as tilt 
 
+Lets think about what we need now 
+
+We will definately need a paragraph 
+that will give it a class name so it has
+size of f3 and within the p 
+since it is JS wrap in curly brackets and quotes 
+
+<p className='f3'>
+	{'This Magic Brain will detect faces in your pictures. Give it a try'}
+
+We want another div 
+
+with an input and a button 
+
+<div> 
+	<input type='tex' />
+	<button>Detect</button>
+
+	//
+
+Now lets add some class names and styling 
+
+<input className='f4 pa2 w-70 center' type='tex' />
+
+<button className='w-30 grow f4 link ph3 pv2 dib white bg-light-purple'>Detect</button>
+
+width 30 which completes 100%, grows when hovering over, size of f4, and more styling using tachyons 
+
+We want the input and button on the same line together 
+A good way to do that is to use the parent div that is wrapping them 
+
+<div className='center'> 
+
+we will do display: flex, and justify: center 
+
+We can also create a class on app.css since we will 
+using that a lot 
+
+in App.css 
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+Now lets add another div to wrap it and maike it smaller 
+We will add a class name and use tachyons
+
+<div className='pa4 br3 shadow-5'>
+
+Looks a bit off, lets fix a few things 
+
+We will need some more css properties 
+
+So lets create a new file in out image link form, .css 
+and within here we will create a form class 
+and give it a width of 700 pixels
+
+.form {
+	width: 700px;
+}
+
+and add center property to following div 
+
+<div className='center pa4 br3 shadow-5'>
+
+For the background, we don't want it to be the exact 
+same as the page 
+
+We can use a nice pattern 
+
+We can use the following web site 
+
+lea.verou.me/css3patterns/
+
+Coping the CSS from the HoneyComb 
+
+Now we can add form to the div class name 
+
+and import the css file into our ImageLinkForm component 
+
+import './ImageLinkForm.css';
+
+Now we should add display flex 
+by adding center classname 
+so that everything is all in one line 
+
+Lets add a pointer when hovering to the whole page (in
+index.css) 
+
+button {
+  cursor: pointer;
+}
+
+So we  have the input, and the last thing is the image 
+
+But we need some functionality before adding the image 
+
+We forgot to do the rank, which means we want something 
+at the top
+
+This rank component will give us our username and our 
+rank compared to all of the other users that have 
+submitted pictures 
+
+Lets import and create a file for rank functionality 
+and add Rank to app.js to our other components 
+Create a folder and jsx file just as the others 
+Import react 
+
+import React from 'react';
+
+const Rank = () => {
+	return (
+		<div>
+		
+		</div>
+	);
+}
+
+export default Rank;
+
+Now lets create out component adding a div 
+and a placeholder
+
+/
+
+<div className='white f3'> 
+	{'Andrei, your current rank is...'}
+</div>
+
+and below the same thing it a little bit bigger 
+/
+
+<div className='white f1'> 
+	{'#5'}
+</div>
+
+Now the last thing before we add functionality 
+Is the generic font 
+
+Lets change it in index.css 
+for the whole page 
+
+lets try courier new for now, with some back up 
+in case the font is not available -monospace
+
+font-family: "Courier New", Courier, monospace;
+
+Very last thing 
+
+That is (or was) popular is the particles.js library 
+
+Allows interactive background 
+
+And do lots of cool things 
+
+They have a react version 
+
+npm install package 
+get javascript code from documentation 
 
 
 
