@@ -16,6 +16,10 @@ const App = () => {
     setInput(event.target.value);
   }
 
+const onButtonSubmit = () => {
+  console.log('click');
+}
+
   useEffect(() => {
     const initParticles = async () => {
       await loadAll(window.tsParticles);
@@ -104,7 +108,7 @@ const App = () => {
       <Navigation />
       <Logo />
       <Rank />
-      <ImageLinkForm onInputChange={onInputChange}/>
+      <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
     </div>
   );
 };

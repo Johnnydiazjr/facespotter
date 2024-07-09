@@ -44,3 +44,32 @@ onInputChange = (event) => {
 
 and on ImageLinkForm we can pass it as a prop 
 
+Now to get a value from your input use event.target.value 
+
+Now to detect an image 
+
+One step at a time 
+
+Lets create a function 
+
+onButtonSubmit = () => {
+	console.log('click');
+}
+
+We can pass onSubmit to our image link form 
+
+<ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
+
+Now in our image link form jsx file 
+
+const ImageLinkForm = ({ onInputChange, omButtonSubmit }) => {
+
+and 
+
+<button className='w-30 grow f4 link ph3 pv2 dib white bg-light-purple'
+			onClick={onButtonSubmit}
+
+Adding onClick event to the button 
+
+So now we move on to add our API 
+
